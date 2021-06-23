@@ -28,7 +28,7 @@ function Hero() {
             <Carousel autoplay>
                 {items.map((item) => {
                     return (
-                        <div dir='rtl' className='container-fluid'>
+                        <div key={item.key} dir='rtl' className='container-fluid'>
                             <div className="content">
                                 <h1>{item.title}</h1>
                                 <p>{item.content}</p>

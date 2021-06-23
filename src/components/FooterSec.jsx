@@ -8,27 +8,27 @@ function FooterSec() {
             <div className="icon">
                 <ul>
                     <li>
-                        <a href="https://twitter.com/ElahiEsrafil" target='_blank'>
+                        <a href="https://twitter.com/ElahiEsrafil" rel="noreferrer" target='_blank'>
                             <i className='fab fa-twitter'></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/esrafil-elahi/" target='_blank'>
+                        <a href="https://www.linkedin.com/in/esrafil-elahi/" rel="noreferrer" target='_blank'>
                             <i className='fab fa-linkedin-in'></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/EsrafilElahi" target='_blank'>
+                        <a href="https://github.com/EsrafilElahi" rel="noreferrer" target='_blank'>
                             <i className='fab fa-github'></i>
                         </a>
                     </li>
                     <li>
-                        <a href="Esrafil.Elahi@gmail.com" target='_blank'>
+                        <a href="Esrafil.Elahi@gmail.com" rel="noreferrer" target='_blank'>
                             <i className='far fa-envelope'></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://t.me/Esrafil_Elahi" target='_blank'>
+                        <a href="https://t.me/Esrafil_Elahi" rel="noreferrer" target='_blank'>
                             <i className='fab fa-telegram-plane'></i>
                         </a>
                     </li>

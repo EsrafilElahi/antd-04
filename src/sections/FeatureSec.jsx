@@ -92,11 +92,11 @@ function FeatureSec() {
                     {
                         items.map((item) => {
                             return (
-                                <Col xs={24} sm={12} md={8} lg={8} xl={6} >
+                                <Col key={item.key}
+                                    xs={24} sm={12} md={8} lg={8} xl={6} >
                                     <Space>
                                         <Card
                                             className='card'
-                                            key={item.key}
                                             hoverable
                                             cover={<img alt={item.alt} style={{ height: 200 }} src={item.src} />}
                                         >

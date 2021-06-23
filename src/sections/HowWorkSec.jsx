@@ -42,7 +42,7 @@ function HowWorkSec() {
                 onCancel={handleCancel}
                 footer={null}
             >
-                <iframe width='100%' height='350' src='https://github.com/EsrafilElahi' ></iframe>
+                <iframe width='100%' height='350' title='work-samples' src='https://github.com/EsrafilElahi' ></iframe>
             </Modal>
 
         </div>
