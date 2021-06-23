@@ -1,38 +1,464 @@
-.App {
-  text-align: center;
+@import "~antd/dist/antd.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: samim;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ===================== Font ===================== */
+
+
+@font-face {
+  font-family: samim;
+  src: url('./assets//fonts/Samim.ttf') format(ttf);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: samim-bold;
+  src: url('./assets//fonts/Samim-Bold.ttf') format(ttf);
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ===================== Base Ant Design ===================== */
+
+.ant-menu-horizontal {
+  background: #f8f8f8 !important;
+}
+
+.ant-layout-header {
+  background: #f8f8f8 !important;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.mainLayout .ant-layout-header {
+  background: #f8f8f8;
+}
+
+.header .ant-anchor-wrapper {
+  background: none;
+}
+
+.header .ant-anchor {
+  display: flex;
+}
+
+.header .ant-anchor-ink {
+  display: none;
+}
+
+.header .ant-anchor-link {
+  padding: 0 20px;
+  line-height: 1.4;
+  position: relative;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+  border-bottom: none;
+}
+
+.ant-menu-horizontal > .ant-menu-item::after,
+.ant-menu-horizontal > .ant-menu-submenu::after {
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  border-bottom: none;
+  content: "";
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+  color: rgba(5, 205, 255, 0.925);
+  transition: ease-out 0.3s all;
+}
+
+.ant-carousel .slick-dots-bottom {
+  bottom: 60px;
+}
+
+.ant-carousel .slick-dots li button {
+  background: rgb(5, 5, 5);
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  background: rgb(6, 140, 230);
+  opacity: 1;
+}
+
+.ant-layout-header {
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+/* ===================== Header vs Content ===================== */
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.hero-block {
+  background: url("./assets/images/bg-hero.jpg");
+  background-size: cover;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 15rem 0;
+  max-width: 35rem;
 }
 
-.App-link {
-  color: #61dafb;
+.content h1 {
+  padding-bottom: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content p {
+  line-height: 2;
+}
+
+.btn-holder {
+  padding-top: 1.5rem;
+}
+
+.btn-border {
+  border: 1px solid rgba(20, 93, 187, 0.623);
+  color: rgba(2, 96, 218, 0.699);
+  margin-right: 1rem;
+}
+
+.btn-border:hover {
+  border: 1px solid rgba(2, 95, 218, 0.966);
+  color: rgba(2, 95, 218, 0.966);
+}
+
+/* ===================== About Us ===================== */
+
+.block {
+  text-align: center;
+  background: #fff;
+  padding-top: 40px;
+}
+
+.titleHolder {
+  position: relative;
+}
+
+.titleHolder h1 {
+  padding-bottom: 10px;
+}
+
+.titleHolder::after {
+  content: "";
+  height: 1px;
+  width: 90px;
+  background: rgba(5, 205, 255, 0.925);
+  position: absolute;
+  margin: 0 auto;
+  left: 38%;
+  top: 120%;
+}
+
+.passage {
+  padding: 50px 90px;
+}
+
+.icon {
+  color: rgba(5, 205, 255, 0.925);
+  font-size: 37px;
+  padding-bottom: 10px;
+}
+
+.about-end {
+  padding-bottom: 50px;
+}
+
+hr {
+  border: none;
+  border-bottom: 0.5px solid rgba(192, 189, 189, 0.568);
+}
+
+/* ===================== Features ===================== */
+
+.card-container {
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+
+/* ===================== how it works ===================== */
+
+.background-fixed {
+  background: url("./assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  height: 22rem;
+  padding-bottom: 70px;
+}
+
+.background-fixed::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.block-works {
+  text-align: center;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.btn-play {
+  text-align: center;
+  margin: 60px 0 50px;
+}
+
+.btn-play button {
+  font-size: 40px;
+  line-height: 1;
+  background: transparent;
+  border: 1px solid rgb(235, 232, 232);
+  color: rgb(235, 232, 232);
+  padding: 20px;
+  padding-left: 25px;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+}
+
+.btn-play button:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.work-h1 {
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+/* ===================== FAQ ===================== */
+
+.faq-sec {
+  padding-top: 70px;
+  text-align: right;
+}
+
+.faq-holder {
+  padding-top: 30px;
+  max-width: 60%;
+}
+
+.faq-holder button {
+  width: 7rem;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.faq-holder .fas {
+  margin: 0 10px 0 0;
+}
+
+.faqsec {
+  background: #fff;
+}
+
+.hr {
+  padding-top: 50px;
+}
+
+/* ===================== Pricnig ===================== */
+
+.card-list {
+  width: 10rem;
+}
+
+.card-list p {
+  color: #444141b2;
+}
+
+.ant-row {
+  display: flex;
+  justify-content: center;
+}
+
+.list-container {
+  padding-top: 70px;
+}
+
+.fa-telegram-plane {
+  margin: 0 10px 0 0;
+}
+
+/* ===================== Form Contact ===================== */
+
+.form-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+}
+
+.ant-form-horizontal {
+  width: 30rem;
+  text-align: right;
+}
+
+.form-block button {
+  margin: 10px 0 0 0;
+  letter-spacing: 1px;
+}
+
+/* ===================== Footer ===================== */
+
+.ant-layout-footer {
+  text-align: center;
+  background: #111 !important;
+  color: #fff;
+}
+
+.icon ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 33px 0px;
+}
+
+.icon li {
+  padding: 15px;
+  font-size: 1.8rem;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon .fab {
+  color: #fff;
+  transition: 0.3s ease-out color;
+}
+
+.icon .fab:hover {
+  color: rgb(0, 195, 255);
+}
+
+.icon .far {
+  color: #fff;
+  transition: 0.3s ease-out color;
+}
+
+.icon .far:hover {
+  color: rgb(0, 195, 255);
+}
+
+.goTop {
+  font-size: 30px;
+  color: rgba(0, 195, 255, 0.74);
+  transition: 0.5s ease-out color;
+}
+
+.goTop:hover {
+  color: rgb(0, 195, 255);
+}
+
+.mobileHidden {
+  display: block;
+}
+
+.mobileVisible {
+  display: none;
+}
+
+/* ===================== Responsive ===================== */
+
+@media screen and (max-width: 992px) {
+  .card-container .card {
+    width: 250;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 576px) {
+  .card-list {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .mobileHidden {
+    display: none;
+  }
+
+  .mobileVisible {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    padding: 60px 50px;
+  }
+
+  .titleHolder {
+    max-width: 16rem;
+  }
+
+  .titleHolder::after {
+    content: "";
+    height: 1px;
+    width: 90px;
+    background: rgba(5, 205, 255, 0.925);
+    position: absolute;
+    margin: 0 auto;
+    left: 34%;
+    top: 120%;
+  }
+
+  .passage {
+    padding: 50px 60px;
+  }
+
+  .about-end p {
+    padding: 0 60px;
   }
 }
