@@ -22,7 +22,7 @@ function MenuSec() {
                 <div className="header">
 
                     <div className='mobileHidden'>
-                        <Anchor offsetTop='15'>
+                        <Anchor offsetTop='15' targetOffset='65'>
                             <Link href='#home' title='خانه' />
                             <Link href='#about' title='درباره ما' />
                             <Link href='#features' title='فیچرها' />
