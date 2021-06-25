@@ -33,10 +33,10 @@ function Hero() {
                                 <h1>{item.title}</h1>
                                 <p>{item.content}</p>
                                 <div className="btn-holder">
-                                    <Button onClick={() => message.warning('دمویی وجود ندارد حاجی', [1])} size='large' type="primary">
+                                    <Button onClick={() => message.warning('دمویی وجود ندارد حاجی', [1.2])} size='large' type="primary">
                                         تماشا دمو
                                     </Button>
-                                    <Button onClick={() => message.warning('یادگیری وجود ندارد داداش', [1])} size='large' className='btn-border' type='link'>
+                                    <Button onClick={() => message.warning('یادگیری وجود ندارد داداش', [1.2])} size='large' className='btn-border' type='link'>
                                         یادگیری ها
                                     </Button>
                                 </div>

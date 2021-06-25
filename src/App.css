@@ -9,15 +9,19 @@
 
 /* ===================== Font ===================== */
 
+html,
+body {
+  scroll-behavior: smooth;
+}
 
 @font-face {
   font-family: samim;
-  src: url('./assets//fonts/Samim.ttf') format(ttf);
+  src: url("./assets//fonts/Samim.ttf") format(ttf);
 }
 
 @font-face {
   font-family: samim-bold;
-  src: url('./assets//fonts/Samim-Bold.ttf') format(ttf);
+  src: url("./assets//fonts/Samim-Bold.ttf") format(ttf);
   font-weight: bold;
 }
 
